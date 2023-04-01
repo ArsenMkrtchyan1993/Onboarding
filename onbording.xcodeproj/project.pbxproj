@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		F31004E729D6CFA5000AB0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31004E629D6CFA5000AB0A4 /* AppDelegate.swift */; };
 		F31004E929D6CFA5000AB0A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31004E829D6CFA5000AB0A4 /* SceneDelegate.swift */; };
-		F31004EB29D6CFA5000AB0A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31004EA29D6CFA5000AB0A4 /* ViewController.swift */; };
+		F31004EB29D6CFA5000AB0A4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31004EA29D6CFA5000AB0A4 /* WelcomeViewController.swift */; };
 		F31004EE29D6CFA5000AB0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31004EC29D6CFA5000AB0A4 /* Main.storyboard */; };
 		F31004F029D6CFA9000AB0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31004EF29D6CFA9000AB0A4 /* Assets.xcassets */; };
 		F31004F329D6CFA9000AB0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31004F129D6CFA9000AB0A4 /* LaunchScreen.storyboard */; };
+		F3B0970329D832F60018346F /* OnboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B0970229D832F60018346F /* OnboardCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F31004E329D6CFA5000AB0A4 /* onbording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onbording.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31004E629D6CFA5000AB0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F31004E829D6CFA5000AB0A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F31004EA29D6CFA5000AB0A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F31004EA29D6CFA5000AB0A4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F31004ED29D6CFA5000AB0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F31004EF29D6CFA9000AB0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F31004F229D6CFA9000AB0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F31004F429D6CFA9000AB0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B0970229D832F60018346F /* OnboardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				F31004E629D6CFA5000AB0A4 /* AppDelegate.swift */,
 				F31004E829D6CFA5000AB0A4 /* SceneDelegate.swift */,
-				F31004EA29D6CFA5000AB0A4 /* ViewController.swift */,
+				F31004EA29D6CFA5000AB0A4 /* WelcomeViewController.swift */,
+				F3B0970229D832F60018346F /* OnboardCollectionViewController.swift */,
 				F31004EC29D6CFA5000AB0A4 /* Main.storyboard */,
 				F31004EF29D6CFA9000AB0A4 /* Assets.xcassets */,
 				F31004F129D6CFA9000AB0A4 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F31004EB29D6CFA5000AB0A4 /* ViewController.swift in Sources */,
+				F31004EB29D6CFA5000AB0A4 /* WelcomeViewController.swift in Sources */,
+				F3B0970329D832F60018346F /* OnboardCollectionViewController.swift in Sources */,
 				F31004E729D6CFA5000AB0A4 /* AppDelegate.swift in Sources */,
 				F31004E929D6CFA5000AB0A4 /* SceneDelegate.swift in Sources */,
 			);
