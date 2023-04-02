@@ -31,16 +31,16 @@ class WelcomeViewController: UIViewController {
         if isAgree {
             onClickView()
             
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .vertical
-            layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-            let onboardVC = OnboardCollectionViewController(collectionViewLayout: layout)
-            onboardVC.modalPresentationStyle = .fullScreen
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                self.present(onboardVC, animated: true)
+//            let layout = UICollectionViewFlowLayout()
+//            layout.scrollDirection = .vertical
+//            layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+//            let onboardVC = OnboardCollectionViewController(collectionViewLayout: layout)
+            if let onboardVC = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController {
+                onboardVC.modalPresentationStyle = .fullScreen
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                    self.present(onboardVC, animated: true)
+                }
             }
-            
-           print( "second view")
         }else {
             agreeView.shake()
         }
