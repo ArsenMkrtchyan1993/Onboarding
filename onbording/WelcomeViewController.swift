@@ -30,21 +30,27 @@ class WelcomeViewController: UIViewController {
     @objc func onUiViewClick(sender : UITapGestureRecognizer) {
         if isAgree {
             onClickView()
-            
+            startOnboardVc()
 //            let layout = UICollectionViewFlowLayout()
 //            layout.scrollDirection = .vertical
 //            layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
 //            let onboardVC = OnboardCollectionViewController(collectionViewLayout: layout)
-            if let onboardVC = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController {
-                onboardVC.modalPresentationStyle = .fullScreen
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                    self.present(onboardVC, animated: true)
-                }
-            }
+           
         }else {
             agreeView.shake()
         }
     }
+    
+    func startOnboardVc() {
+        if let onboardVC = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController {
+            onboardVC.modalPresentationStyle = .fullScreen
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                self.present(onboardVC, animated: true)
+            }
+        }
+    }
+    
+    
     func onClickView() {
         UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
             self.ligiImageView.transform = CGAffineTransform(translationX: 0, y: 0)
