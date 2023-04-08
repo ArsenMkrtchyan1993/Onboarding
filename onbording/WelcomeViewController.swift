@@ -30,24 +30,23 @@ class WelcomeViewController: UIViewController {
     @objc func onUiViewClick(sender : UITapGestureRecognizer) {
         if isAgree {
             onClickView()
-            startOnboardVc()
-//            let layout = UICollectionViewFlowLayout()
-//            layout.scrollDirection = .vertical
-//            layout.itemSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-//            let onboardVC = OnboardCollectionViewController(collectionViewLayout: layout)
            
+            let onboardVC = ViewController()
+            onboardVC.modalPresentationStyle = .fullScreen
+            self.present(onboardVC, animated: true)
         }else {
             agreeView.shake()
         }
     }
     
     func startOnboardVc() {
-        if let onboardVC = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? PageViewController {
-            onboardVC.modalPresentationStyle = .fullScreen
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+        let onboardVC = ViewController()
+        onboardVC.modalPresentationStyle = .fullScreen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2)
+        {
                 self.present(onboardVC, animated: true)
             }
-        }
+        
     }
     
     
@@ -160,13 +159,16 @@ class WelcomeViewController: UIViewController {
     }
 }
 
+
 extension String {
     func createRangeinaLink(of findWord: String) -> NSRange {
         let range = (self as NSString).range(of: findWord, options: .caseInsensitive)
         return range
     }
 }
+
 extension UIView {
+    
     func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
