@@ -31,7 +31,7 @@ class WelcomeViewController: UIViewController {
         if isAgree {
             onClickView()
            
-            let onboardVC = ViewController()
+            let onboardVC = OnboardCollectionViewController()
             onboardVC.modalPresentationStyle = .fullScreen
             self.present(onboardVC, animated: true)
         }else {
@@ -40,7 +40,7 @@ class WelcomeViewController: UIViewController {
     }
     
     func startOnboardVc() {
-        let onboardVC = ViewController()
+        let onboardVC = OnboardCollectionViewController()
         onboardVC.modalPresentationStyle = .fullScreen
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2)
         {
