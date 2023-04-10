@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        setupUI()
         let clickGesture = UITapGestureRecognizer(target: self, action:  #selector(self.onUiViewClick))
         viewForButton.addGestureRecognizer(clickGesture)
         
@@ -44,9 +44,8 @@ class WelcomeViewController: UIViewController {
         onboardVC.modalPresentationStyle = .fullScreen
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2)
         {
-                self.present(onboardVC, animated: true)
-            }
-        
+            self.present(onboardVC, animated: true)
+        }
     }
     
     
@@ -96,7 +95,7 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    func setUpUI() {
+    func setupUI() {
         view.backgroundColor = .black
         allInLabel.numberOfLines = 2
         agreeLabel.text = agreeMessage
@@ -105,7 +104,6 @@ class WelcomeViewController: UIViewController {
         let attributedString = NSMutableAttributedString(string: agreeMessage, attributes: attributedStringColor)
         attributedString.addAttribute(.link, value: "https://google.com", range: agreeMessage.createRangeinaLink(of: "Terms of use"))
         attributedString.addAttribute(.link, value: "https://google.com", range: agreeMessage.createRangeinaLink(of: "Privacy Policy"))
-        
         
         let applyColor:[NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,
@@ -156,24 +154,5 @@ class WelcomeViewController: UIViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return UIColor(patternImage: image!)
-    }
-}
-
-
-extension String {
-    func createRangeinaLink(of findWord: String) -> NSRange {
-        let range = (self as NSString).range(of: findWord, options: .caseInsensitive)
-        return range
-    }
-}
-
-extension UIView {
-    
-    func shake() {
-        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        animation.duration = 0.3
-        animation.values = [-10.0, 10.0, -10.0, 10.0, -2.0, 2.0, -0.0, 0.0, 0.0 ]
-        layer.add(animation, forKey: "shake")
     }
 }
