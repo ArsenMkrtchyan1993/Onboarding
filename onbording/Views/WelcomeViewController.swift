@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var ligiImageView: UIImageView!
     @IBOutlet weak var nameLabel:UILabel!
     @IBOutlet weak var agreeLabel: UITextView!
-    @IBOutlet weak var checkBoxBtn: UIButton!
+    @IBOutlet weak var checkBoxButton: UIButton!
     @IBOutlet weak var continueLabel: UILabel!
     @IBOutlet weak var viewForButton: UIView!
     @IBOutlet weak var agreeView: UIView!
@@ -126,17 +126,17 @@ class WelcomeViewController: UIViewController {
     
     
     @IBAction func checkBoxBtnTapped(_ sender: UIButton) {
-        if checkBoxBtn.isSelected {
-            checkBoxBtn.setImage(UIImage(named: "checkboxoff"), for: .normal)
+        if checkBoxButton.isSelected {
+            checkBoxButton.setImage(UIImage(named: "checkboxoff"), for: .normal)
             continueLabel.textColor = #colorLiteral(red: 0.5725490196, green: 0.5725490196, blue: 0.5725490196, alpha: 1)
 
             isAgree = false
         } else {
-            checkBoxBtn.setImage(UIImage(named: "checkboxon"), for: .normal)
+            checkBoxButton.setImage(UIImage(named: "checkboxon"), for: .normal)
             continueLabel.textColor = .white
             isAgree = true
         }
-        checkBoxBtn.isSelected = !checkBoxBtn.isSelected
+        checkBoxButton.isSelected = !checkBoxButton.isSelected
     }
     
     
